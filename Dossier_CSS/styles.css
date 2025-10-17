@@ -1,0 +1,551 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: whitesmoke;
+    color: #000;
+    position: relative;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo {
+    background-image: url('../Dossier_images/Berliner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-btn, .reserver-table-btn {
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.menu-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.reserver-table-btn {
+    background-color: rgba(255, 0, 0, 0.9);
+    color: #fff;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: whitesmoke;
+    color: #000;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.menu-subtitle {
+    margin-bottom: 30px;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu Card */
+.menu-card {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.menu-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 0, 0, 0.625);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-card-info {
+    background: rgba(255, 255, 255, 0.666);
+    padding: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+.menu-card-info h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.menu-card-info .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.753);
+}
+
+/* Form */
+.menu-card-form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Autres sections (À propos, Galerie, Contact, etc.) */
+/* Reservation Section */
+.reservation-container {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation-header h1 {
+    color: #003366;
+    border-bottom: 2px solid #ff0000;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.confirm-btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    grid-column: span 2;
+}
+
+.confirm-btn:hover {
+    background-color: #cc0000;
+}
+
+/* About Section */
+.about-container {
+    background-color: white;
+    color: #000;
+    padding: 40px;
+    max-width: 700px;
+    margin: 20px auto;
+    position: relative;
+    text-align: left;
+    height: auto;
+}
+
+.about-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.red-line {
+    width: 50px;
+    height: 3px;
+    background-color: #ff0000;
+    margin: 0 0 20px 0;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.since-badge {
+    background-color: #ff0000;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.since-badge p:first-child {
+    font-size: 0.8em;
+}
+
+.since-badge p:last-child {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Gallery Section */
+.gallery-container {
+    background-color: whitesmoke;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-title {
+    color: #003366;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background-color: #e7e7e7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: rgb(109, 107, 107);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-subtitle {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-map, .contact-form {
+    background-color: #545252;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    color: #fff;
+    text-align: left;
+    margin-top: 20px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.contact-info p {
+    text-align: left;
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(109, 107, 107);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-form {
+        grid-template-columns: 1fr;
+    }
+}
